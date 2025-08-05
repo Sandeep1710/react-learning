@@ -17,4 +17,5 @@ function ButtonComponent() {
     ) 
 }
 
+
 export  {BasicDetails,ButtonComponent};
