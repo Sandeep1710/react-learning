@@ -12,11 +12,11 @@ jobs:
     steps:
       # Checkout the repo
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Setup Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -28,9 +28,9 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      # Optional: Upload build as artifact
+      # Upload the production build
       - name: Upload production build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: react-build
           path: build
